@@ -5,13 +5,13 @@ public class PracticeProblem {
 	}
 	public static void selectionSortName(String[] names, int[] ages){
 		for (int i = 0; i<names.length; i++){
-			names[i] = names[i].toLowerCase();
+			
 		}
 		for (int i = 0; i<names.length -1; i++){
 			//find the min
 			int indexOfMin = i;
 			for (int j = i + 1; j <names.length; j++){
-				if (names[j].compareTo(names[indexOfMin])<0){
+				if (names[j].compareToIgnoreCase(names[indexOfMin])<0){
 					indexOfMin = j;
 				}
 			}
@@ -26,11 +26,11 @@ public class PracticeProblem {
 
 
 	public static void selectionSortAge(String[] names, int[] ages){
-		for (int i = 0; i<names.length -1; i++){
+		for (int i = 0; i < ages.length - 1; i++) {
 			//find the min
 			int indexOfMin = i;
-			for (int j = i + 1; j <names.length; j++){
-				if (names[j].compareTo(names[indexOfMin])<0){
+			for (int j = i + 1; j <ages.length; j++){
+				if (ages[j]< (ages[indexOfMin])){
 					indexOfMin = j;
 				}
 			}
